@@ -1,0 +1,97 @@
+/* .birthday-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .confetti {
+    font-size: 2rem;
+    animation: rotate 3s infinite linear;
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    animation: fade-in 2s ease-in-out;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+   */
+
+
+   /* Style for the birthday container */
+.birthday-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Big, animated birthday text */
+  .birthday-text {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #9f2e67;
+    animation: textGlow 1.5s ease-in-out infinite alternate;
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
+  }
+  
+  /* Fading tagline */
+  .tagline {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    opacity: 0;
+    animation: fadeIn 2s forwards 1s;
+  }
+  
+  /* Glow animation */
+  @keyframes textGlow {
+    0% {
+      text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4;
+      transform: scale(1);
+    }
+    100% {
+      text-shadow: 0 0 20px #ff69b4, 0 0 40px #ff69b4, 0 0 60px #ff69b4;
+      transform: scale(1.1);
+    }
+  }
+  
+  /* Fade-in animation for the tagline */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
