@@ -5,7 +5,6 @@ import './CounterPage.css'
 const P1 = () => {
     const navigate = useNavigate();
     const [counter, setCounter] = useState(5);
-    const [textVisible, setTextVisible] = useState(false);
     const [dropFlower, setDropFlower] = useState(false);
 
     const handleCounter = () => {
@@ -21,9 +20,7 @@ const P1 = () => {
             }, 3000)
         }
     }
-    const handleClick = () => {
-        setTextVisible(true);
-    }
+
 
     return (
         <div>

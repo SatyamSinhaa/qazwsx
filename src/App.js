@@ -5,7 +5,6 @@ import Butterfly from './components/Butterfly';
 import F2 from './components/Butterfly';
 import F1 from './components/F1';
 import HbdWish from './components/HbdWish';
-import i from './components/assets/SAVE_20240929_232534.jpg'
 import vid from './components/assets/sanchi_vid.mp4'
 import P1 from './Pages/CounterPage';
 import P2 from './Pages/P2';
