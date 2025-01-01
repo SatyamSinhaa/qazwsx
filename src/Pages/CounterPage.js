@@ -34,8 +34,6 @@ const P1 = () => {
                 <div className="flower">🌺</div>
                 <div className="flower">🌻</div>
             </div>}
-  
-            <button onClick={() => navigate("/p2")}>Go to page 2</button>
         </div>
     )
 }

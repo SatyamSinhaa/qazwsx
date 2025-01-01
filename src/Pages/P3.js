@@ -1,9 +1,11 @@
 import React from 'react'
+import vid from '../components/assets/sanchi_vid.mp4'
 
 const P3 = () => {
   return (
     <div>
-      <h1>1</h1>
+      <video src={vid} controls autoPlay/>
+      <p>© 2025 Satyam Sinha. All rights reserved.</p>
     </div>
   )
 }
