@@ -1,7 +1,6 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
 import P1 from './Pages/CounterPage';
 import P2 from './Pages/P2';
 import P3 from './Pages/P3';

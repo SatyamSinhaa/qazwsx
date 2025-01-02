@@ -25,7 +25,7 @@ const P1 = () => {
     return (
         <div>
             <h1>{counter}</h1>
-            <button onClick={handleCounter}>click me</button> <br />
+            <button onClick={handleCounter}>क्लिक</button> <br />
 
             {dropFlower && <div className="flower-container">
                 {/* Display flower emojis */}
@@ -33,6 +33,7 @@ const P1 = () => {
                 <div className="flower">🌼</div>
                 <div className="flower">🌺</div>
                 <div className="flower">🌻</div>
+                
             </div>}
         </div>
     )

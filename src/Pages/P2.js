@@ -40,8 +40,7 @@ const P2 = () => {
 
     return (
         <div>
-            <audio src={song} controls autoPlay/>
-            <h1>Page 2</h1>
+            <audio src={song} controls autoPlay style={{display:'none'}}/>
 
             {/* Show text and the first image if counter >= 1 */}
             {counter >= 1 && (
