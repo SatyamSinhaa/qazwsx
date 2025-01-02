@@ -52,7 +52,7 @@ const P2 = () => {
 
             {/* Dynamically render images based on counter */}
             {images.slice(1, counter).map((image, index) => (
-                <img key={index} src={image} alt={`Image ${index + 2}`} height={500} />
+                <img key={index} src={image} alt={`pic ${index + 2}`} height={500} />
             ))}
 
             <br/><button onClick={handleCounter}>क्लिक</button>
