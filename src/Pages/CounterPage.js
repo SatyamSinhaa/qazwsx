@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import './CounterPage.css'
+import Butterfly from '../components/Butterfly';
 
 const P1 = () => {
     const navigate = useNavigate();
@@ -17,7 +18,7 @@ const P1 = () => {
 
             setTimeout(() => {
                 navigate("/p2");
-            }, 3000)
+            }, 5000)
         }
     }
 
@@ -25,16 +26,18 @@ const P1 = () => {
     return (
         <div>
             <h1>{counter}</h1>
-            <button onClick={handleCounter}>क्लिक</button> <br />
+            <button onClick={handleCounter}>CLICK</button> <br />
 
-            {dropFlower && <div className="flower-container">
-                {/* Display flower emojis */}
-                <div className="flower">🌸</div>
-                <div className="flower">🌼</div>
-                <div className="flower">🌺</div>
-                <div className="flower">🌻</div>
-                
+            {dropFlower && <div>
+                <div className="flower-container">
+                    <div className="flower">🌸</div>
+                    <div className="flower">🌼</div>
+                    <div className="flower">🌺</div>
+                    <div className="flower">🌻</div>
+                </div>
+                <Butterfly />
             </div>}
+
         </div>
     )
 }
