@@ -24,7 +24,7 @@ const TypingEffect = ({lines}) => {
 
     return (
         <div>
-            <div>{formatTextWithBreaks(displayedText)}</div>
+            <div /**style={{textAlign:'left', padding:'0 15px'}}*/>{formatTextWithBreaks(displayedText)}</div>
         </div>
     )
 }

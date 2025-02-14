@@ -1,0 +1,62 @@
+.App {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+    position: relative; /* Ensures the container has relative positioning for absolute children */
+  }
+  
+  .flower-container {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-evenly; /* Evenly space out the flowers */
+    width: 100%; /* Ensure the flowers span the full width */
+    opacity: 1;
+    pointer-events: none; /* Prevent interaction while flowers are animating */
+    animation: dropFlowers 3s forwards; /* Animate the appearance */
+  }
+  
+  .flower {
+    font-size: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Animate the appearance with fading */
+  }
+  
+  .flower:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .flower:nth-child(2) {
+    animation-delay: 0.5s; /* Stagger the animation */
+  }
+  
+  .flower:nth-child(3) {
+    animation-delay: 1s; /* Stagger the animation */
+  }
+  
+  .flower:nth-child(4) {
+    animation-delay: 1.5s; /* Stagger the animation */
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.5); /* Start with smaller size */
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1); /* End with normal size */
+    }
+  }
+  
+  @keyframes dropFlowers {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
