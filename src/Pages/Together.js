@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import TypingEffect from '../components/TypingEffect';
-import song from '../assets/songs/Jaavedaan.mp3'
+import song from '../assets/songs/Co2.mp3'
 import s2 from '../assets/together/s2.jpg'
 import s3 from '../assets/together/s3.jpg'
 import s4 from '../assets/together/s4.jpg'
@@ -10,6 +10,7 @@ import s6 from '../assets/together/s6.jpg'
 import s7 from '../assets/together/s7.jpg'
 import s8 from '../assets/together/s8.jpg'
 import s1 from '../assets/together/s1.jpg'
+import s9 from '../assets/together/s9.jpg'
 
 const Together = () => {
     const images = [
@@ -20,13 +21,14 @@ const Together = () => {
         { image: s5 },
         { image: s6 },
         { image: s7 },
+        { image: s9 },
         { image: s8 },
     ]
     const [counter, setCounter] = useState(0);
     const navigate = useNavigate();
 
     const handleCounter = () => {
-        setCounter((prev) => Math.min(prev + 1)); // Prevent counter from exceeding images array length
+        setCounter((prev) => Math.min(prev + 1)); 
         console.log(counter);
     };
     return (
@@ -42,8 +44,8 @@ const Together = () => {
                     {index === 4 && <h2>uummmmaaaahh</h2>}
                     {index === 5 && <h2>hath pakad liya hu 🥰</h2>}
                     {index === 6 && <h2>aapke dwara liya gaya best photo</h2>}
-                    {index === 7 && <h2>say cheez 😘</h2>}
-                    {/* <h3><TypingEffect lines={image.line} /></h3> */}
+                    {index === 7 && <h2>or ye urvi ko bahoot pasand aya</h2>}
+                    {index === 8 && <h2>say cheez 😘</h2>}
                 </div>
             ))}
             {counter >= 9 && <TypingEffect lines={'<h2>bss itni hi photos he</h2>'}/>}

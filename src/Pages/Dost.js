@@ -59,7 +59,7 @@ const Dost = () => {
   const navigate = useNavigate();
 
   const handleCounter = () => {
-    setCounter((prev) => Math.min(prev + 1)); // Prevent counter from exceeding images array length
+    setCounter((prev) => Math.min(prev + 1));
     console.log(counter);
   };
 
@@ -71,7 +71,6 @@ const Dost = () => {
         <div key={index}>
           {index === 18 && <h2>baapre</h2>}
           <img src={image.image} alt={`pic ${index + 2}`} height={510} />
-          {/* <h3><TypingEffect lines={image.line} /></h3> */}
         </div>
       ))}
       <button onClick={handleCounter}>click</button>

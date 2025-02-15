@@ -33,7 +33,6 @@ function App() {
           <Route path='/s' element={<S />} />
         </Routes>
       </BrowserRouter>
-      {/* <Pig /> */}
     </div>
   );
 }

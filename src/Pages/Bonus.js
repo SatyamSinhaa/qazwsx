@@ -15,8 +15,8 @@ const Bonus = () => {
         { image: s2, line: '🙄' },
         { image: s3, line: 'are' },
         { image: s5, line: 'are nahi ye kya kya aa raha he' },
-        { image: s4, line: 'me nai kiya hu set' },
-        { image: '', line: '' },
+        { image: s4, line: 'me nai dala hu ye sab' },
+        { image: '', line: 'kuch gadbadi hui he' },
         { image: '', line: '' },
         { image: s6, line: '' },
     ]
@@ -25,7 +25,7 @@ const Bonus = () => {
     const navigate = useNavigate();
 
     const handleCounter = () => {
-        setCounter((prev) => Math.min(prev + 1)); // Prevent counter from exceeding images array length
+        setCounter((prev) => Math.min(prev + 1));
         console.log(counter);
     };
     return (
@@ -43,10 +43,10 @@ const Bonus = () => {
                     {counter >= 11 && <TypingEffect lines={'<h3>mera kuchu puchu</h3>'} />}
                 </div>
             }
-            {counter === 12 && <div>{counter >= 12 && <TypingEffect lines={'<h1>for better experience <br> avoid bluetooth earphones <br> because it has latency <br> it cannot sync at time</h1>'} />}</div>}
+            {counter === 12 && <div>{counter >= 12 && <TypingEffect lines={'<h1>Gadbadi theek ho gai he<br><br>for better experience <br> avoid bluetooth earphones <br> because it has latency <br> it cannot sync at time</h1>'} />}</div>}
 
             {counter >= 13 && <div>
-                <video controls src={edit} autoPlay height={500} />
+                <video src={edit} autoPlay controls height={500} />
                 
                 </div>}
             <br /><button onClick={handleCounter}>click</button>

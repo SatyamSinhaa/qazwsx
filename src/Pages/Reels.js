@@ -15,17 +15,17 @@ import r11 from '../assets/reels/r11.mp4'
 import Pig from '../components/Pig';
 
 const Reels = () => {
-  const reels = [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11]
+  const reels = [r1, r2, r3, r4, r5, r6, r7, r8, r9, r11, r10]
 
   const navigate = useNavigate();
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(1);
   const [flag, setFlag] = useState(null);
   const [display, setDisplay] = useState(false);
   const handleNo = () => setFlag(false);
   const handleDisplay = () => setDisplay(true);
 
   const handleCounter = () => {
-    setCounter((prev) => Math.min(prev + 1)); // Prevent counter from exceeding images array length
+    setCounter((prev) => Math.min(prev + 1)); 
     console.log(counter);
   };
 
@@ -60,17 +60,14 @@ const Reels = () => {
             {index === 10 && <TypingEffect lines={'<h2>aa gaya ji 😊</h2>'} />}
           </div>
         ))}
-        {counter >= 13 && <TypingEffect lines={'<h1>chale ab</h1>'} />}
-        {counter >= 14 && <TypingEffect lines={'<h1>per kaha jaenge</h1>'} />}
-        {counter >= 15 && <TypingEffect lines={'<h1>BTW mujhpe chodh de 🤗<br> me leke jata </h1>'} />}
-        {/* {counter >= 17 && <TypingEffect lines={'<h1>are button kharab ho gaya kya</h1>'} />} */}
-        {counter >= 18 && <TypingEffect lines={'<h1>kharab nai hua he vo <br> thoda dabao usko</h1>'} />}
+        {counter >= 13 && <TypingEffect lines={'<h2>chale ab</h2>'} />}
+        {counter >= 14 && <TypingEffect lines={'<h2>per kaha jaenge</h2>'} />}
+        {counter >= 15 && <TypingEffect lines={'<h2>BTW mujhpe chodh de 🤗<br> me leke jata </h2>'} />}
+        {counter >= 18 && <TypingEffect lines={'<h2>kharab nai hua he vo <br> thoda dabao usko</h2>'} />}
         {counter >= 21 && <div>
           <Pig />
-          {/* <button>chalo</button>
-          <button>nai jana</button> */}
 
-          {setTimeout(() => { navigate("/comments2") }, 7000)}
+          {setTimeout(() => { navigate("/comments2") }, 8000)}
         </div>}
           <button onClick={handleCounter}>click</button>
       </div>}

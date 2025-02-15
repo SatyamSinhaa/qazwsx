@@ -16,13 +16,13 @@ const Yvideos = () => {
     console.log(counter);
 
     const handleCounter = () => {
-        setCounter((prev) => Math.min(prev + 1)); // Prevent counter from exceeding images array length
+        setCounter((prev) => Math.min(prev + 1));
         console.log(counter);
       };
     
     return (
-        <div>
-            <TypingEffect lines={'<h1>videos nai he to kya hua <br> we all know that you are very good at imagining <br> so will feel it <br> Caution : thoda intense he</h1>'} />
+        <div style={{height:"700px"}}>
+            <TypingEffect lines={'<h2>videos nai he to kya hua <br> we all know that you are very good at imagining <br> so will feel it <br> Caution : thoda intense he</h2>'} />
             {videos.slice(0, counter).map((video, i) => (
                 <div key={i}>
                     {i === 3 && <TypingEffect lines={"<h3>ek br or...</h3>"}/>}
@@ -32,7 +32,7 @@ const Yvideos = () => {
                 </div>
             ))}
             <button onClick={handleCounter}>click</button>
-            {counter >= 7 && <div><Butterfly/> {setTimeout(() => { navigate("/saari") }, 7000)}</div>}
+            {counter >= 7 && <div><Butterfly/> {setTimeout(() => { navigate("/saari") }, 8000)}</div>}
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import HbdWish from '../components/HbdWish';
-import song from '../assets/Yaad Piya Ki Aane Lagi Neha Kakkar 128 Kbps.mp3'
+import song from '../assets/songs/Yaad.mp3'
 import s2 from '../assets/comment/s2.jpg'
 import s3 from '../assets/comment/s3.jpg'
 import s4 from '../assets/comment/s4.jpg'
@@ -74,7 +74,7 @@ const Comments = () => {
     const navigate = useNavigate();
 
     const handleCounter = () => {
-        setCounter((prev) => Math.min(prev + 1)); // Prevent counter from exceeding images array length
+        setCounter((prev) => Math.min(prev + 1));
         console.log(counter);
 
         if (counter >= 31) {
@@ -89,7 +89,6 @@ const Comments = () => {
             {counter >= 1 && (
                 <>
                     <HbdWish />
-                    {/* <img src={sansat} alt="Sansat" height={500} /> */}
                 </>
             )}
 

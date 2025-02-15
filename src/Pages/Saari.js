@@ -27,7 +27,7 @@ const Saari = () => {
     const navigate = useNavigate();
 
     const handleCounter = () => {
-        setCounter((prev) => Math.min(prev + 1)); // Prevent counter from exceeding images array length
+        setCounter((prev) => Math.min(prev + 1)); 
         console.log(counter);
     };
     return (
@@ -36,11 +36,12 @@ const Saari = () => {
             {images.slice(0, counter).map((image, index) => (
                 <div key={index}>
                     <img src={image.image} alt={`pic ${index + 2}`} height={510} />
+                    {index === 6 && <h3>agr uss dhaage ko khichu to...</h3>}
                 </div>
             ))}
             {counter >= 10 && <TypingEffect lines={'<h2>बोलो न क्यों ये चाँद सितारे <br>तकते हैं यूँ मुखड़े को तुम्हारे <br> छूके बदन को हवा क्यों महकी <br> रात भी है क्यों बहकी बहकी.</h2>'}/> }
             {counter >= 13 && navigate('/end')}
-            <button onClick={handleCounter}>click</button>
+            <button onClick={handleCounter}>Yes</button>
         </div>
     )
 }

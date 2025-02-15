@@ -6,7 +6,7 @@ const End = () => {
   const [counter, setCounter] = useState(0);
   const navigate = useNavigate()
   const handleCounter = () => {
-    setCounter((prev) => Math.min(prev + 1)); // Prevent counter from exceeding images array length
+    setCounter((prev) => Math.min(prev + 1)); 
     console.log(counter);
   };
   return (
@@ -24,7 +24,7 @@ const End = () => {
       {counter > 15 && <TypingEffect lines={'<h2>iska jimmedaar me nai hounga na <br> teri zid me jaa rhe he</h2>'}/>}
       {counter > 17 && <div>
         <TypingEffect lines={'<h2>redirecting to bonus content...</h2>'}/>
-        {setTimeout(()=>navigate('/bonus'), 3000)}
+        {setTimeout(()=>navigate('/bonus'), 5000)}
         </div>}
       <button onClick={handleCounter}>click</button>
     </div>

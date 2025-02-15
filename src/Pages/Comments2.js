@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
+import song from '../assets/songs/Kiya.mp3'
 import s1 from '../assets/comment2/s1.jpg'
 import s2 from '../assets/comment2/s2.jpg'
 import s3 from '../assets/comment2/s3.jpg'
@@ -37,7 +38,6 @@ import s34 from '../assets/comment2/s34.jpg'
 import s35 from '../assets/comment2/s35.jpg'
 import s36 from '../assets/comment2/s36.jpg'
 import s37 from '../assets/comment2/s37.jpg'
-import TypingEffect from '../components/TypingEffect';
 
 const Comments2 = () => {
     const images = [
@@ -48,7 +48,7 @@ const Comments2 = () => {
         {image:s5, line:'isko koi toilet lekr jao yr, sube me krke nai nikalti'},
         {image:s6, line:'kya chupa rhi he'},
         {image:s7, line:'ohh baal dikha rhi he'},
-        {image:s8, line:'baal to dikha di na fir kya, small ass'},
+        {image:s8, line:'baal to dikha di na fir kya, #small ass'},
         {image:s9, line:'mere sath reh ke bi pappi dena nai sikhi'},
         {image:s10, line:'edit kiya tha isko to pasand nai aya'},
         {image:s11, line:'vo ghutna kyu utha hua he, or mobile ko rakh ke photo liya kr na'},
@@ -62,7 +62,7 @@ const Comments2 = () => {
         {image:s19, line:'muthi marne vala pose he'},
         {image:s20, line:'jabardasti pakad li he, uske face pe dikh raha pasand nai aa raha usko'},
         {image:s21, line:'sibani kya 2 jhapad de ke bithai thi'},
-        {image:s22, line:'ye photo me linkedin se churaya tha'},
+        {image:s22, line:'linkedin ki photo thi ek vakt pe'},
         {image:s23, line:'ye mail ka photo tha ek vkt pe'},
         {image:s24, line:'ye dress pehen ke ek br mere se milne aai thi'},
         {image:s25, line:'saari photos me ye pehli photo he jisko dekh ke me socha ki ye ladki sundar to he'},
@@ -82,21 +82,22 @@ const Comments2 = () => {
     const [counter, setCounter] = useState(0);
     const navigate = useNavigate();
     const handleCounter = () => {
-        setCounter((prev) => Math.min(prev + 1)); // Prevent counter from exceeding images array length
+        setCounter((prev) => Math.min(prev + 1)); 
         console.log(counter);
     };
 
     return (
         <div>
+            <audio src={song} controls autoPlay style={{display:'none'}}/>
             <h2>thoda or bolna chahta hu</h2>
             {images.slice(0, counter).map((image, index) => (
                 <div key={index}>
                     <img src={image.image} alt={`pic ${index + 2}`} height={510} />
-                    <h3><TypingEffect lines={image.line} /></h3>
+                    <h3>{image.line}</h3>
                 </div>
             ))}
             <button onClick={handleCounter}>click</button>
-            {counter >= 38 && navigate('/dost')}
+            {counter >= 39 && navigate('/dost')}
         </div>
     )
 }
