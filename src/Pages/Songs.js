@@ -27,6 +27,7 @@ import s27 from '../assets/lyrics/s27.jpg';
 import s30 from '../assets/lyrics/s30.jpg';
 import s31 from '../assets/lyrics/s31.jpg';
 import sat1 from '../assets/lyrics/sat1.jpg';
+import song from '../assets/songs/Chand.mp3';
 
 const Songs = () => {
   const images = [
@@ -80,7 +81,10 @@ const Songs = () => {
       {counter >= 28 && <h1>🙏</h1>}
       <button onClick={handleCounter}>click</button>
         </div>}
-      {counter > 30 && <TypingEffect lines={'<br><br><h1>Enjoy your day <br>my love👋 <br><br> #mySagarika 🫶</h1>'}/>}
+      {counter > 30 && <div>
+        <audio src={song} controls autoPlay style={{display:'none'}}/>
+        <TypingEffect lines={'<br><br><h1>Enjoy your day 👋<br>my love 😘<br><br> #MySagarika 🫶</h1>'}/>
+        </div>}
     </div>
   )
 }
